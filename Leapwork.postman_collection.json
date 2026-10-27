@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "366eeb7f-a25d-462e-8f62-bd923768b64e",
+		"name": "Leapwork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " xml; charset=utf-8",
+						"type": "text"
+					},
+					{
+						"key": "SOAPAction",
+						"value": " \"http://tempuri.org/Add\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n    <soap:Body>\r\n        <Add xmlns=\"http://tempuri.org/\">\r\n            <intA>100</intA>\r\n            <intB>200</intB>\r\n        </Add>\r\n    </soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://www.dneonline.com/calculator.asmx",
+					"protocol": "http",
+					"host": [
+						"www",
+						"dneonline",
+						"com"
+					],
+					"path": [
+						"calculator.asmx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
